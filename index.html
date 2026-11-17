@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NORPPA для магазинов — оптовое сотрудничество</title>
+<meta name="description" content="Мембранная верхняя одежда NORPPA для магазинов: детям, подросткам, женщинам и мужчинам. Оптовый прайс, предзаказ на сезон и сток прошлых коллекций.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="NORPPA для магазинов">
+<meta property="og:description" content="Мембранная одежда для реальной погоды — в ассортимент вашего магазина.">
+<meta property="og:image" content="https://shop.norppa.ru/upload/iblock/18c/rzmexvvb588spgsv7paj6a41m64kmii2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Onest:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+:root{
+  --ice:#EEF2F3;        /* фон: подтаявший лёд */
+  --snow:#FAFBFB;       /* светлые поверхности */
+  --ladoga:#1E3A4C;     /* текст и тёмные блоки: ладожская вода */
+  --seal:#7D8A90;       /* вторичный текст: мех нерпы */
+  --frost:#C9D4D8;      /* линии, рамки */
+  --cloudberry:#E39B2D; /* единственный акцент: морошка */
+  --display:"Onest", "Golos Text", system-ui, sans-serif;
+  --text:"Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:min(1180px, 100% - 32px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--ice);color:var(--ladoga);font:400 17px/1.55 var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cloudberry);outline-offset:3px;border-radius:2px}
+.wrap{width:var(--wrap);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(28px,4vw,46px);max-width:18ch}
+p{margin:0}
+.lede{color:var(--seal);max-width:56ch}
+
+/* кнопки */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--text);text-decoration:none;padding:17px 26px;border-radius:999px;border:2px solid var(--ladoga);cursor:pointer;transition:background .2s,color .2s}
+.btn-main{background:var(--cloudberry);border-color:var(--cloudberry);color:var(--ladoga)}
+.btn-main:hover{background:#f0ac44}
+.btn-ghost{background:transparent;color:var(--ladoga)}
+.btn-ghost:hover{background:var(--ladoga);color:var(--ice)}
+
+/* шапка */
+.top{position:sticky;top:0;z-index:20;background:rgba(238,242,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--frost)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.logo{font:600 21px/1 var(--display);letter-spacing:.2em;text-decoration:none}
+.logo small{font:500 13px/1 var(--text);letter-spacing:0;color:var(--seal);margin-left:10px}
+.top nav{display:flex;gap:24px;margin-left:auto}
+.top nav a{text-decoration:none;font-weight:500;font-size:15px}
+.top nav a:hover{color:var(--seal)}
+.top .btn{padding:12px 18px;font-size:14px}
+@media (max-width:860px){.top nav{display:none}.top .btn{margin-left:auto}.logo small{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:calc(100vh - 68px);max-height:900px}
+.hero-copy{padding:clamp(40px,7vw,96px) clamp(16px,5vw,72px) 48px max(16px, calc((100vw - 1180px)/2));display:flex;flex-direction:column;justify-content:center;gap:28px}
+.hero h1{font-size:clamp(36px,4.6vw,66px);font-weight:500;letter-spacing:-.035em;max-width:15ch}
+.hero .lede{font-size:clamp(17px,1.6vw,20px);color:var(--ladoga);opacity:.8}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.proof{display:grid;grid-template-columns:repeat(3,auto);gap:18px 34px;padding-top:26px;border-top:1px solid var(--frost);max-width:640px}
+.proof b{display:block;font:600 22px/1.1 var(--display)}
+.proof span{font-size:14px;color:var(--seal)}
+.hero-photo{position:relative;margin:0;background:#e3e6e7 url("https://shop.norppa.ru/upload/resize_cache/iblock/faf/1200_1200_1/h3iw0alfxwqz6m6e9ps04b8llgdkbcog.jpg") center 22%/cover no-repeat}
+.hero-photo figcaption{position:absolute;left:20px;bottom:20px;background:var(--snow);padding:12px 16px;border-radius:10px;font-size:14px;line-height:1.35;max-width:260px}
+.hero-photo figcaption b{font-family:var(--display);font-weight:600}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;max-height:none;min-height:0}
+  .hero-photo{min-height:44vh;order:-1;background-position:center 12%}
+  .hero-photo figcaption{left:12px;bottom:12px;padding:9px 12px;font-size:13px}
+  .hero-copy{padding:36px 16px 44px}
+  .proof{grid-template-columns:1fr 1fr}
+}
+
+section{padding:clamp(72px,9vw,128px) 0}
+
+/* почему */
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:start}
+.why h2{position:sticky;top:110px}
+.reasons{list-style:none;margin:0;padding:0}
+.reasons li{padding:28px 0;border-top:1px solid var(--frost)}
+.reasons li:last-child{border-bottom:1px solid var(--frost)}
+.reasons h3{font-size:21px;margin-bottom:10px}
+.reasons p{color:var(--ladoga);opacity:.78;max-width:58ch}
+@media (max-width:860px){.why .wrap{grid-template-columns:1fr}.why h2{position:static}}
+
+/* коллекция-карта — главный элемент страницы */
+.atlas{background:var(--ladoga);color:var(--ice)}
+.atlas .lede{color:#a9bcc6}
+.atlas-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px 60px;align-items:end;margin-bottom:56px}
+.atlas-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,72px);align-items:start}
+.places{list-style:none;margin:0;padding:0;counter-reset:none}
+.place{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:4px 24px;width:100%;text-align:left;background:none;border:0;border-top:1px solid rgba(201,212,216,.22);color:inherit;padding:16px 0;cursor:pointer;font:inherit}
+.places li:last-child .place{border-bottom:1px solid rgba(201,212,216,.22)}
+.place .nm{font:600 clamp(30px,4.6vw,64px)/1 var(--display);letter-spacing:-.02em;color:rgba(238,242,243,.38);transition:color .25s}
+.place .where{font-size:15px;color:#a9bcc6;text-align:right}
+.place .what{grid-column:1/-1;font-size:15px;color:var(--cloudberry);height:0;overflow:hidden;opacity:0;transition:opacity .25s}
+.place[aria-pressed="true"] .nm,.place:hover .nm{color:var(--ice)}
+.place[aria-pressed="true"] .what{height:auto;opacity:1}
+.place .thumb{display:none}
+.atlas-photo{position:sticky;top:100px;margin:0;border-radius:14px;overflow:hidden;background:#dfe3e4;aspect-ratio:4/5}
+.atlas-photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:opacity .35s}
+.atlas-photo img.fading{opacity:0}
+.atlas-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(transparent,rgba(30,58,76,.85));color:var(--ice);font-size:15px}
+@media (max-width:860px){
+  .atlas-grid{grid-template-columns:1fr}
+  .atlas-photo{display:none}
+  .place{grid-template-columns:72px 1fr;gap:4px 16px;align-items:start;align-content:start}
+  .place .thumb{display:block;grid-row:1/4;width:72px;height:90px;object-fit:cover;object-position:center 15%;border-radius:8px;background:#dfe3e4}
+  .place .nm{color:var(--ice);font-size:30px}
+  .place .where{text-align:left}
+  .place .what{height:auto;opacity:1;grid-column:2}
+}
+
+/* линейки */
+.lines-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px 60px;align-items:end;margin-bottom:44px}
+.lines-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.line{background:var(--snow);border-radius:14px;overflow:hidden}
+.line img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 15%;background:#e3e6e7}
+.line div{padding:18px 18px 22px}
+.line h3{font-size:20px;margin-bottom:6px}
+.line p{font-size:15px;color:var(--seal)}
+.line p b{color:var(--ladoga);font-weight:600}
+@media (max-width:960px){.lines-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.lines-grid{grid-template-columns:1fr 1fr;gap:12px}.line div{padding:14px}.line h3{font-size:17px}}
+
+/* форматы */
+.formats{background:var(--snow)}
+.formats h2{margin-bottom:44px}
+.fmt{display:grid;grid-template-columns:260px 1fr 210px;gap:12px 48px;padding:30px 0;border-top:1px solid var(--frost);align-items:start}
+.fmt:last-child{border-bottom:1px solid var(--frost)}
+.fmt h3{font-size:22px}
+.fmt p{opacity:.8;max-width:60ch}
+.fmt .tag{font-size:14px;color:var(--seal);text-align:right}
+@media (max-width:860px){.fmt .tag{text-align:left}}
+.fmt a{font-weight:600}
+@media (max-width:860px){.fmt{grid-template-columns:1fr;gap:10px}}
+
+/* шаги */
+.steps h2{margin-bottom:16px}
+.steps .lede{margin-bottom:48px}
+.steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s}
+.steps li{counter-increment:s;padding:0 20px 0 0;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:2px solid var(--ladoga);font:600 17px/1 var(--display);margin-bottom:18px;background:var(--ice);position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;top:22px;left:44px;right:0;height:2px;background:var(--frost)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:18px;margin-bottom:8px}
+.steps p{font-size:15px;opacity:.78}
+.season{margin-top:56px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.season div{border:1px solid var(--frost);border-radius:14px;padding:22px 24px;background:var(--snow)}
+.season b{font:600 18px/1.2 var(--display);display:block;margin-bottom:6px}
+.season p{opacity:.8;font-size:15px}
+@media (max-width:960px){
+  .steps ol{grid-template-columns:1fr;gap:26px}
+  .steps li{display:grid;grid-template-columns:44px 1fr;gap:4px 18px;padding:0}
+  .steps li::before{margin:0;grid-row:1/3}
+  .steps li::after{top:44px;bottom:-26px;left:21px;right:auto;width:2px;height:auto}
+  .season{grid-template-columns:1fr}
+}
+
+/* где уже */
+.reach{background:var(--ladoga);color:var(--ice)}
+.reach .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px)}
+.reach .lede{color:#a9bcc6;margin-top:18px}
+.reach dl{margin:0}
+.reach dt{font:600 18px/1.3 var(--display);margin-top:26px}
+.reach dt:first-child{margin-top:0}
+.reach dd{margin:6px 0 0;color:#c9d6dc}
+.reach .open{margin-top:30px;padding:20px 22px;border-radius:14px;background:rgba(227,155,45,.14);border:1px solid rgba(227,155,45,.5)}
+.reach .open b{color:var(--cloudberry)}
+@media (max-width:860px){.reach .wrap{grid-template-columns:1fr}}
+
+/* заявка */
+.apply .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,96px);align-items:start}
+.apply .lede{margin:18px 0 30px}
+.contacts{display:grid;gap:14px;font-size:16px}
+.contacts a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--frost)}
+.contacts span{display:block;color:var(--seal);font-size:14px}
+form{background:var(--snow);border-radius:18px;padding:clamp(22px,4vw,40px);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:grid;gap:7px;font-size:14px;font-weight:500}
+.full{grid-column:1/-1}
+input,textarea,select{font:inherit;font-size:16px;color:var(--ladoga);background:var(--ice);border:1.5px solid var(--frost);border-radius:10px;padding:13px 14px;width:100%}
+input:focus,textarea:focus{border-color:var(--ladoga);outline:none;box-shadow:0 0 0 3px rgba(227,155,45,.45)}
+textarea{min-height:96px;resize:vertical}
+fieldset{border:0;padding:0;margin:0;grid-column:1/-1}
+legend{font-size:14px;font-weight:500;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label{display:inline-block;font-weight:500;font-size:15px;padding:10px 14px;border:1.5px solid var(--frost);border-radius:999px;cursor:pointer;background:var(--ice)}
+.chips input:checked+label{background:var(--ladoga);border-color:var(--ladoga);color:var(--ice)}
+.chips input:focus-visible+label{outline:3px solid var(--cloudberry);outline-offset:2px}
+.form-note{grid-column:1/-1;font-size:13px;color:var(--seal)}
+.form-status{grid-column:1/-1;font-size:15px;min-height:1.4em}
+.form-status.err{color:#b3261e}
+@media (max-width:860px){.apply .wrap{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--frost);padding:34px 0 44px;font-size:14px;color:var(--seal)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 40px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="NORPPA, наверх">NORPPA<small>для магазинов</small></a>
+    <nav aria-label="Разделы">
+      <a href="#atlas">Коллекция</a>
+      <a href="#formats">Форматы</a>
+      <a href="#steps">Как начать</a>
+      <a href="#reach">Где продаётся</a>
+    </nav>
+    <a class="btn btn-main" href="#apply">Запросить прайс</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">Одежда для реальной погоды — в вашем магазине</h1>
+      <p class="lede">NORPPA — мембранные куртки, парки, плащи и комбинезоны из Петербурга. Для детей, подростков, женщин и мужчин. Работаем с магазинами по сезонному предзаказу и со склада.</p>
+      <div class="hero-cta">
+        <a class="btn btn-main" href="#apply">Запросить оптовый прайс</a>
+        <a class="btn btn-ghost" href="#atlas">Посмотреть коллекцию</a>
+      </div>
+      <div class="proof" aria-label="Факты о бренде">
+        <div><b>15+ лет</b><span>команда работает с мембранной одеждой</span></div>
+        <div><b>40 000+</b><span>изделий продано на Wildberries</span></div>
+        <div><b>4,7 и 4,9</b><span>рейтинг магазина на WB и Ozon</span></div>
+      </div>
+    </div>
+    <figure class="hero-photo" role="img" aria-label="Модель в удлинённой утеплённой куртке NORPPA Нева">
+      <figcaption><b>Нева</b><br>больше 200 отзывов на Wildberries</figcaption>
+    </figure>
+  </section>
+
+  <section class="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <h2 id="why-title">Почему магазины берут NORPPA</h2>
+      <ul class="reasons">
+        <li>
+          <h3>Опыт, которому доверяют покупатели</h3>
+          <p>До 2022 года наша команда 15 лет представляла в России шведский Didriksons. NORPPA делают те же люди, и шьют её на фабриках, где раньше производили Didriksons.</p>
+        </li>
+        <li>
+          <h3>Бренд уже знают</h3>
+          <p>NORPPA продаётся на Wildberries, Ozon, Lamoda, в Детском мире и Спортмастере. Покупатель видит знакомую марку с тысячами отзывов, а у вас её можно примерить.</p>
+        </li>
+        <li>
+          <h3>Вся семья в одном бренде</h3>
+          <p>Линейки для детей, подростков, женщин и мужчин. Мама, которая пришла за комбинезоном для ребёнка, уходит с паркой и для себя.</p>
+        </li>
+        <li>
+          <h3>Технологии, которые легко объяснить</h3>
+          <p>Мембраны, утеплители, софтшелл, полиуретан — на norppa.ru есть понятные статьи о каждом материале и уходе за ним. Ваш продавец быстро в них разберётся.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="atlas" id="atlas" aria-labelledby="atlas-title">
+    <div class="wrap">
+      <div class="atlas-head">
+        <h2 id="atlas-title">Каждая модель названа по месту, где погода её проверит</h2>
+        <p class="lede">Реки, горы, вулканы и озёра Севера, Урала и Камчатки. Выберите место, чтобы увидеть модель.</p>
+      </div>
+      <div class="atlas-grid">
+        <ul class="places" id="places"></ul>
+        <figure class="atlas-photo" aria-live="polite">
+          <img id="atlas-img" src="" alt="">
+          <figcaption id="atlas-cap"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="lines" aria-labelledby="lines-title">
+    <div class="wrap">
+      <div class="lines-head">
+        <h2 id="lines-title">Четыре линейки — одна полка</h2>
+        <p class="lede">Цифры — по фирменному интернет-магазину, ноябрь 2026. Модели в разных цветах считаются отдельно.</p>
+      </div>
+      <div class="lines-grid">
+        <article class="line">
+          <img src="https://shop.norppa.ru/upload/iblock/a6f/er41n7a9wdsi5ny6ssjbyqxxu61jpdn0.jpg" alt="Женская утеплённая парка Иремель" loading="lazy">
+          <div><h3>Женщинам</h3><p><b>53 модели</b> — пальто, куртки, плащи. Розница в среднем около 16 тыс. ₽</p></div>
+        </article>
+        <article class="line">
+          <img src="https://shop.norppa.ru/upload/iblock/319/topdfhdbpp7hchacm491psky2ugzvc1n.jpg" alt="Мужское утеплённое пальто Балиал" loading="lazy">
+          <div><h3>Мужчинам</h3><p><b>44 модели</b> — куртки, пальто, брюки. Розница в среднем около 16 тыс. ₽</p></div>
+        </article>
+        <article class="line">
+          <img src="https://shop.norppa.ru/upload/resize_cache/iblock/7bb/1200_1200_1/p4uh2zw1wv1t5lgww0hcrn2t4b0ztf30.jpeg" alt="Подростковая удлинённая утеплённая куртка Кукас" loading="lazy">
+          <div><h3>Подросткам</h3><p><b>13 моделей</b> — куртки, парки, костюмы. Розница в среднем около 12 тыс. ₽</p></div>
+        </article>
+        <article class="line">
+          <img src="https://shop.norppa.ru/upload/resize_cache/iblock/376/1200_1200_1/3ytbmqm62ylb09qjnx3qi5rq3wbc2xsz.jpeg" alt="Детский утеплённый комбинезон Сандал" loading="lazy">
+          <div><h3>Детям</h3><p><b>47 моделей</b> — комбинезоны, куртки, костюмы, шапки и варежки</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="formats" id="formats" aria-labelledby="formats-title">
+    <div class="wrap">
+      <h2 id="formats-title">Выберите, как работать вместе</h2>
+      <div class="fmt">
+        <h3>Магазинам</h3>
+        <p>Сезонный предзаказ по лукбуку и дозаказ со склада в Санкт-Петербурге. Подберём ростовки и ассортимент под ваш город и полку.</p>
+        <span class="tag">одежда, детские товары, outdoor</span>
+      </div>
+      <div class="fmt">
+        <h3>Сток прошлых сезонов</h3>
+        <p>Модели прошлых коллекций по сниженной оптовой цене — для аутлетов, дисконт-центров, совместных покупок и быстрого оборота.</p>
+        <span class="tag">партии от склада</span>
+      </div>
+      <div class="fmt">
+        <h3>Селлерам маркетплейсов</h3>
+        <p>Работаем с продавцами на площадках, где у бренда пока мало ассортимента. Обязательное условие — согласованная минимальная цена.</p>
+        <span class="tag">Ozon, Яндекс Маркет и другие</span>
+      </div>
+      <div class="fmt">
+        <h3>Компаниям</h3>
+        <p>Одежда для сотрудников, командировок, выездных мероприятий и подарков, с нанесением логотипа. Подробности — на <a href="https://www.norppa.ru/business" target="_blank" rel="noopener">norppa.ru/business</a>.</p>
+        <span class="tag">брендирование</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" id="steps" aria-labelledby="steps-title">
+    <div class="wrap">
+      <h2 id="steps-title">Как начать</h2>
+      <p class="lede">От заявки до товара на полке — пять шагов. Менеджер ведёт вас на каждом.</p>
+      <ol>
+        <li><h3>Заявка</h3><p>Расскажите о магазине: город, формат, кто ваш покупатель.</p></li>
+        <li><h3>Прайс и лукбук</h3><p>Пришлём оптовые цены, остатки, размерные сетки и фото.</p></li>
+        <li><h3>Подбор ассортимента</h3><p>Предложим модели и ростовки, которые подойдут вашему климату и чеку.</p></li>
+        <li><h3>Первый заказ</h3><p>Согласуем условия оплаты и доставки, отгрузим со склада.</p></li>
+        <li><h3>Предзаказ на сезон</h3><p>Закрепим за вами коллекцию следующего сезона заранее.</p></li>
+      </ol>
+      <div class="season">
+        <div><b>Зима закупается весной</b><p>Предзаказ на осень–зиму магазины обычно делают с февраля по май. Так вы получаете нужные модели и размеры к первым холодам.</p></div>
+        <div><b>Весна–лето — осенью</b><p>Плащи, ветровки и лёгкие куртки на весну–лето 2027 стоит заказать до конца года. Точные сроки уточните у менеджера.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reach" id="reach" aria-labelledby="reach-title">
+    <div class="wrap">
+      <div>
+        <h2 id="reach-title">Где NORPPA уже продаётся</h2>
+        <p class="lede">Бренд вырос из сети, которую команда строила 15 лет. Сильнее всего он там, где мембрана нужна, а не просто модна.</p>
+        <div class="open"><b>Ищем партнёров</b> в Сибири, на Урале, в Поволжье и на Дальнем Востоке: Новосибирск, Красноярск, Иркутск, Тюмень, Сургут, Пермь, Казань, Нижний Новгород, Якутск, Хабаровск.</div>
+      </div>
+      <dl>
+        <dt>Фирменные магазины</dt>
+        <dd>Санкт-Петербург — 6, включая аутлет; Москва — 2; Самара — 1</dd>
+        <dt>Маркетплейсы и сети</dt>
+        <dd>Wildberries, Ozon, Lamoda, Детский мир, Спортмастер</dd>
+        <dt>Магазины-партнёры</dt>
+        <dd>Санкт-Петербург, Москва, Мурманск, Архангельск, Северодвинск, Сыктывкар, Киров, Екатеринбург, Челябинск, Уфа, Петропавловск-Камчатский, Южно-Сахалинск и другие города</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="apply" id="apply" aria-labelledby="apply-title">
+    <div class="wrap">
+      <div>
+        <h2 id="apply-title">Запросите оптовый прайс</h2>
+        <p class="lede">Ответим в рабочий день: пришлём прайс, лукбук и условия для вашего формата.</p>
+        <div class="contacts">
+          <div><span>Почта</span><a href="mailto:office@norppa.ru">office@norppa.ru</a></div>
+          <div><span>Телефон, будни 10:00–18:00 МСК</span><a href="tel:+78123368777">+7 (812) 336-87-77</a></div>
+        </div>
+      </div>
+      <form id="lead" novalidate>
+        <label>Название магазина или компании<input name="company" autocomplete="organization" required></label>
+        <label>Город<input name="city" autocomplete="address-level2" required></label>
+        <label>Ваше имя<input name="name" autocomplete="name" required></label>
+        <label>Телефон<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+        <fieldset>
+          <legend>Что интересует</legend>
+          <div class="chips">
+            <input type="checkbox" id="i1" name="interest" value="Сезонный предзаказ"><label for="i1">Сезонный предзаказ</label>
+            <input type="checkbox" id="i2" name="interest" value="Товар со склада"><label for="i2">Товар со склада</label>
+            <input type="checkbox" id="i3" name="interest" value="Сток прошлых сезонов"><label for="i3">Сток прошлых сезонов</label>
+            <input type="checkbox" id="i4" name="interest" value="Продажа на маркетплейсах"><label for="i4">Продажа на маркетплейсах</label>
+            <input type="checkbox" id="i5" name="interest" value="Корпоративный заказ"><label for="i5">Корпоративный заказ</label>
+          </div>
+        </fieldset>
+        <label class="full">Комментарий<textarea name="comment" placeholder="Например: детский магазин, 120 м², сейчас продаём Kerry и Huppa"></textarea></label>
+        <div class="full"><button class="btn btn-main" type="submit">Отправить заявку</button></div>
+        <p class="form-status" id="status" role="status"></p>
+        <p class="form-note">По кнопке откроется ваша почта с готовым письмом на office@norppa.ru — останется нажать «Отправить».</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>NORPPA, ООО «Гармония «АЛЬКОР», ИНН 7804507308, Санкт-Петербург</span>
+    <span>Концепт страницы для оптовых партнёров. Фото товаров — с shop.norppa.ru</span>
+  </div>
+</footer>
+
+<script>
+// Коллекция-карта: модели названы по реальным местам
+const IMG = "https://shop.norppa.ru/upload/";
+const places = [
+  {nm:"Оленица", where:"село на Терском берегу Белого моря", what:"Женская удлинённая утеплённая куртка", img:IMG+"iblock/18c/rzmexvvb588spgsv7paj6a41m64kmii2.jpg"},
+  {nm:"Нева", where:"река, Санкт-Петербург", what:"Женская удлинённая утеплённая куртка", img:IMG+"resize_cache/iblock/faf/1200_1200_1/h3iw0alfxwqz6m6e9ps04b8llgdkbcog.jpg"},
+  {nm:"Гирвас", where:"посёлок в Карелии", what:"Мужская утеплённая куртка", img:IMG+"iblock/60a/jj12azaercqm3iaqawt1efxlt4g262qm.jpg"},
+  {nm:"Иремель", where:"гора на Южном Урале", what:"Женская утеплённая парка", img:IMG+"iblock/a6f/er41n7a9wdsi5ny6ssjbyqxxu61jpdn0.jpg"},
+  {nm:"Авача", where:"вулкан и бухта на Камчатке", what:"Женская удлинённая утеплённая куртка", img:IMG+"iblock/c33/sx7zghgf21t112l0y2dlzktz7r1auq7g.jpg"},
+  {nm:"Ессей", where:"озеро в Эвенкии", what:"Мужская куртка из софтшелла", img:IMG+"iblock/fdf/u5euofyvzwqqrwln2myjlgnv0sk2px10.jpg"},
+  {nm:"Синара", where:"река на Среднем Урале", what:"Детский утеплённый комбинезон", img:IMG+"iblock/321/ndl0xnovs9gvzz7bjmnpxnb1adlyy6qk.jpg"},
+  {nm:"Кама", where:"река в Приуралье", what:"Женский плащ", img:IMG+"resize_cache/iblock/ec2/1200_1200_1/slfd3n5vcey3176vplathr8g4rc4asse.jpeg"}
+];
+const list = document.getElementById("places"), img = document.getElementById("atlas-img"), cap = document.getElementById("atlas-cap");
+places.forEach((p, i) => {
+  const li = document.createElement("li");
+  li.innerHTML = `<button class="place" type="button" aria-pressed="false">
+      <img class="thumb" src="${p.img}" alt="" loading="lazy">
+      <span class="nm">${p.nm}</span><span class="where">${p.where}</span>
+      <span class="what">${p.what}</span></button>`;
+  const btn = li.firstElementChild;
+  const show = () => select(i);
+  btn.addEventListener("click", show);
+  btn.addEventListener("mouseenter", show);
+  btn.addEventListener("focus", show);
+  list.appendChild(li);
+});
+let current = -1;
+function select(i){
+  if (i === current) return;
+  current = i;
+  list.querySelectorAll(".place").forEach((b, j) => b.setAttribute("aria-pressed", j === i));
+  const p = places[i];
+  img.classList.add("fading");
+  const next = new Image();
+  next.onload = next.onerror = () => {
+    img.src = p.img; img.alt = `${p.what} ${p.nm}`;
+    cap.textContent = `${p.nm} — ${p.what.toLowerCase()}`;
+    requestAnimationFrame(() => img.classList.remove("fading"));
+  };
+  next.src = p.img;
+}
+select(0);
+// предзагрузка фото, чтобы смена была мгновенной
+places.forEach(p => { const im = new Image(); im.src = p.img; });
+
+// Заявка: собираем письмо на office@norppa.ru
+document.getElementById("lead").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, st = document.getElementById("status");
+  const need = ["company","city","name","phone"].filter(n => !f[n].value.trim());
+  if (need.length){
+    st.className = "form-status err";
+    st.textContent = "Заполните название, город, имя и телефон — без них менеджер не сможет связаться с вами.";
+    f[need[0]].focus(); return;
+  }
+  const interests = [...f.querySelectorAll('input[name="interest"]:checked')].map(x => x.value).join(", ") || "не указано";
+  const body = [
+    `Магазин / компания: ${f.company.value}`,
+    `Город: ${f.city.value}`,
+    `Контактное лицо: ${f.name.value}`,
+    `Телефон: ${f.phone.value}`,
+    `Интересует: ${interests}`,
+    f.comment.value.trim() ? `Комментарий: ${f.comment.value.trim()}` : ""
+  ].filter(Boolean).join("\n");
+  const subject = `Оптовое сотрудничество: ${f.company.value}, ${f.city.value}`;
+  location.href = `mailto:office@norppa.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  st.className = "form-status";
+  st.textContent = "Письмо с заявкой открыто в вашей почте. Нажмите «Отправить», и менеджер ответит в рабочий день.";
+});
+</script>
+</body>
+</html>
